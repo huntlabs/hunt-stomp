@@ -1,9 +1,8 @@
 # hunt-stomp
-STOMP implements in D
+STOMP implement in D
 
 ### TODO
-- [x] STOMP server implemented
-- [ ] STOMP client
+- [x] STOMP implemented
 - [ ] Improvement
 - [ ] Examples
 - [ ] Unit tests
