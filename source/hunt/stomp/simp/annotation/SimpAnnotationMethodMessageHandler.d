@@ -20,7 +20,7 @@ import hunt.stomp.simp.annotation.AbstractMethodMessageHandler;
 
 // import hunt.framework.beans.factory.config.ConfigurableBeanFactory;
 // import hunt.framework.context.ApplicationContext;
-import hunt.util.SmartLifecycle;
+import hunt.util.Lifecycle;
 // import hunt.framework.context.ConfigurableApplicationContext;
 // import hunt.framework.context.EmbeddedValueResolverAware;
 // import hunt.framework.core.annotation.AnnotatedElementUtils;

@@ -21,7 +21,7 @@ import hunt.stomp.simp.broker.OrderedMessageSender;
 
 import hunt.util.ApplicationEvent;
 // import hunt.framework.context.ApplicationEventPublisherAware;
-import hunt.util.SmartLifecycle;
+import hunt.util.Lifecycle;
 
 import hunt.stomp.Message;
 import hunt.stomp.MessageChannel;
