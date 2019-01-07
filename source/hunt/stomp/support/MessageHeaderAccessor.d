@@ -24,7 +24,7 @@ import hunt.stomp.MessageHeaders;
 import hunt.util.MimeType;
 
 import hunt.lang.Charset;
-import hunt.lang.object;
+import hunt.lang.Object;
 import hunt.lang.Long;
 import hunt.container;
 import hunt.datetime;

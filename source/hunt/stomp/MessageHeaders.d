@@ -34,7 +34,7 @@ import hunt.logging;
 import hunt.lang.Long;
 import hunt.lang.Nullable;
 import hunt.lang.exception;
-import hunt.lang.object;
+import hunt.lang.Object;
 
 import std.uuid;
 import std.range;

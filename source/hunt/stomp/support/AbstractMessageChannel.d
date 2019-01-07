@@ -23,7 +23,7 @@ import hunt.stomp.Message;
 import hunt.stomp.MessageChannel;
 import hunt.stomp.MessagingException;
 
-import hunt.lang.object;
+import hunt.lang.Object;
 import hunt.container;
 import hunt.logging;
 import hunt.util.ObjectUtils;

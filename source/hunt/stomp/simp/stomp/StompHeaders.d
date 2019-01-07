@@ -19,6 +19,7 @@ module hunt.stomp.simp.stomp.StompHeaders;
 import hunt.container;
 import hunt.lang.exception;
 import hunt.lang.Long;
+import hunt.lang.Object;
 import hunt.string;
 
 import std.conv;
@@ -610,6 +611,10 @@ class StompHeaders : MultiValueMap!(string, string) {
 
     InputRange!(List!(string)) byValue() {
         return this.headers.byValue();
+    }
+
+    bool opEquals(IObject o) {
+        return opEquals(cast(Object)o);
     }
 
 	override
