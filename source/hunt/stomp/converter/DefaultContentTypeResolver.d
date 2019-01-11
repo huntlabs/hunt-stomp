@@ -20,9 +20,9 @@ import hunt.stomp.converter.ContentTypeResolver;
 import hunt.stomp.MessageHeaders;
 import hunt.util.MimeType;
 
-import hunt.lang.exception;
-import hunt.lang.Nullable;
-import hunt.lang.String;
+import hunt.Exceptions;
+import hunt.Nullable;
+import hunt.String;
 
 /**
  * A default {@link ContentTypeResolver} that checks the

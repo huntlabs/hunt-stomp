@@ -16,9 +16,9 @@
 
 module hunt.stomp.core.AbstractMessageSendingTemplate;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 import hunt.logging;
-import hunt.lang.exception;
+import hunt.Exceptions;
 
 import hunt.stomp.converter.MessageConverter;
 import hunt.stomp.converter.SimpleMessageConverter;

@@ -1,13 +1,12 @@
 {
     "name": "hunt-stomp",
     "description": "STOMP implement in D.",
-    "copyright": "Copyright (C) 2015-2018, HuntLabs.net",
-    "authors": [
-        "zhangxueping"
-    ],
+    "copyright": "Copyright (C) 2018-2019, HuntLabs",
+    "homepage": "https://www.huntlabs.net/",
     "license": "Apache-2.0",
     "dependencies":{        
-        "hunt" : "~>1.0.0-rc.7",
-        "hunt-security" : "~>0.0.5"
+        "hunt" : "~>1.0.0",
+        "hunt-security" : "~>0.0.6"
     }
 }
+

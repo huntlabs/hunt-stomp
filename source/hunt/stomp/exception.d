@@ -1,6 +1,6 @@
 module hunt.stomp.exception;
 
-import hunt.lang.exception;
+import hunt.Exceptions;
 
 class StompConversionException : NestedRuntimeException {
     mixin BasicExceptionCtors;

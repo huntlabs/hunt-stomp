@@ -16,7 +16,7 @@
 
 module hunt.stomp.core.CachingDestinationResolverProxy;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 // import java.util.concurrent.ConcurrentHashMap;
 
 // import hunt.framework.beans.factory.InitializingBean;

@@ -19,7 +19,7 @@ module hunt.stomp.simp.stomp.StompSession;
 import hunt.stomp.simp.stomp.StompFrameHandler;
 import hunt.stomp.simp.stomp.StompHeaders;
 
-import hunt.lang.common;
+import hunt.util.Common;
 
 
 /**

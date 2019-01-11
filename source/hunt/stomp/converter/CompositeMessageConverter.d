@@ -21,7 +21,7 @@ import hunt.stomp.converter.SmartMessageConverter;
 import hunt.stomp.Message;
 import hunt.stomp.MessageHeaders;
 
-import hunt.container;
+import hunt.collection;
 import std.conv;
 
 

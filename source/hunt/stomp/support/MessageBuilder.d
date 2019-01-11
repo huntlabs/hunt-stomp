@@ -24,7 +24,7 @@ import hunt.stomp.Message;
 import hunt.stomp.MessageChannel;
 import hunt.stomp.MessageHeaders;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 /**
  * A builder for creating a {@link GenericMessage}

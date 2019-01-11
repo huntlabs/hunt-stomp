@@ -16,7 +16,7 @@
 
 module hunt.stomp.core.DestinationResolvingMessageRequestReplyOperations;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 import hunt.stomp.core.MessageRequestReplyOperations;
 import hunt.stomp.Message;

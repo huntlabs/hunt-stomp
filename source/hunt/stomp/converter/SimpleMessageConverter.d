@@ -25,7 +25,7 @@ import hunt.stomp.support.MessageBuilder;
 import hunt.stomp.support.MessageHeaderAccessor;
 
 import hunt.logging;
-import hunt.lang.exception;
+import hunt.Exceptions;
 
 /**
  * A simple converter that simply unwraps the message payload as long as it matches the

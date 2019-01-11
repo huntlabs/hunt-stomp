@@ -21,8 +21,8 @@ import hunt.stomp.simp.SimpMessageType;
 import hunt.stomp.Message;
 import hunt.stomp.handler.AbstractMessageCondition;
 
-import hunt.container;
-import hunt.lang.Nullable;
+import hunt.collection;
+import hunt.Nullable;
 
 /**
  * {@code MessageCondition} that matches by the message type obtained via

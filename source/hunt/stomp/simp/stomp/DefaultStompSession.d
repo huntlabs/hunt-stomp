@@ -34,10 +34,10 @@ import hunt.stomp.IdGenerator;
 
 // import java.lang.reflect.Type;
 // import java.util.ArrayList;
-// import hunt.container.Collections;
+// import hunt.collection.Collections;
 // import java.util.Date;
 // import java.util.List;
-// import hunt.container.Map;
+// import hunt.collection.Map;
 // import java.util.concurrent.ConcurrentHashMap;
 // import java.util.concurrent.ExecutionException;
 // import java.util.concurrent.ScheduledFuture;
@@ -46,11 +46,11 @@ import hunt.stomp.IdGenerator;
 
 // import hunt.framework.task.TaskScheduler;
 
-import hunt.container;
-import hunt.datetime;
-import hunt.lang.common;
-import hunt.lang.exception;
-import hunt.lang.Nullable;
+import hunt.collection;
+import hunt.util.DateTime;
+import hunt.util.Common;
+import hunt.Exceptions;
+import hunt.Nullable;
 import hunt.logging;
 
 import std.algorithm;

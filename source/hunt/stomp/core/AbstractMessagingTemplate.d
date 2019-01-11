@@ -16,7 +16,7 @@
 
 module hunt.stomp.core.AbstractMessagingTemplate;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 import hunt.stomp.core.AbstractMessageReceivingTemplate;
 import hunt.stomp.core.MessageRequestReplyOperations;

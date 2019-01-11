@@ -23,8 +23,8 @@ import hunt.stomp.simp.stomp.StompHeaderAccessor;
 import hunt.stomp.exception;
 import hunt.stomp.Message;
 
-import hunt.container;
-import hunt.lang.Integer;
+import hunt.collection;
+import hunt.Integer;
 
 import std.algorithm;
 import std.array;

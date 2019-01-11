@@ -22,7 +22,7 @@ import hunt.stomp.core.DestinationResolvingMessageReceivingOperations;
 import hunt.stomp.core.DestinationResolvingMessageRequestReplyOperations;
 import hunt.stomp.Message;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 
 /**

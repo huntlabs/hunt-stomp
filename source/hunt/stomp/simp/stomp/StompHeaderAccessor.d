@@ -24,12 +24,14 @@ import hunt.stomp.support.MessageHeaderAccessor;
 
 import hunt.util.MimeType;
 
-import hunt.container;
-import hunt.lang.Charset;
-import hunt.lang.exception;
-import hunt.lang.Integer;
-import hunt.lang.Nullable;
-import hunt.string;
+import hunt.collection;
+import hunt.Exceptions;
+import hunt.Integer;
+import hunt.Nullable;
+import hunt.text.Charset;
+import hunt.text.Common;
+import hunt.text.StringBuilder;
+import hunt.text.StringUtils;
 
 import std.conv;
 import std.string;

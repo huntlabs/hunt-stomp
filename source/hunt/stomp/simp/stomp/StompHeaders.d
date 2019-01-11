@@ -16,20 +16,19 @@
 
 module hunt.stomp.simp.stomp.StompHeaders;
 
-import hunt.container;
-import hunt.lang.exception;
-import hunt.lang.Long;
-import hunt.lang.Object;
-import hunt.string;
-
-import std.conv;
-import std.range;
-
-// 
+import hunt.collection;
+import hunt.Exceptions;
+import hunt.Long;
+import hunt.Object;
+import hunt.text.Common;
+import hunt.text.StringUtils;
 import hunt.util.AcceptMimeType;
 import hunt.util.MimeType;
 import hunt.util.MimeTypeUtils;
 // import hunt.util.ObjectUtils;
+
+import std.conv;
+import std.range;
 
 /**
  * Represents STOMP frame headers.

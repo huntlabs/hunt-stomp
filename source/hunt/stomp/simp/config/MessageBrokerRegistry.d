@@ -26,7 +26,7 @@ import hunt.stomp.MessageChannel;
 import hunt.stomp.simp.broker.SimpleBrokerMessageHandler;
 import hunt.stomp.simp.stomp.StompBrokerRelayMessageHandler;
 
-import hunt.string.PathMatcher;
+import hunt.text.PathMatcher;
 
 /**
  * A registry for configuring message broker options.

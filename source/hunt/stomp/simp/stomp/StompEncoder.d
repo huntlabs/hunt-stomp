@@ -30,10 +30,11 @@ import hunt.io.ByteArrayOutputStream;
 import hunt.io.BufferedOutputStream;
 // import java.util.concurrent.ConcurrentHashMap;
 
-import hunt.container;
+import hunt.collection;
 import hunt.logging;
-import hunt.lang.exception;
-import hunt.string;
+import hunt.Exceptions;
+import hunt.text.Common;
+import hunt.text.StringBuilder;
 
 import std.conv;
 

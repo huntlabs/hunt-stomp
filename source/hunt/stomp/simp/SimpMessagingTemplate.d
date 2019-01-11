@@ -32,7 +32,7 @@ import hunt.stomp.support.MessageHeaderAccessor;
 import hunt.stomp.support.NativeMessageHeaderAccessor;
 // import hunt.framework.util.StringUtils;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 import hunt.logging;
 import std.array;
 import std.conv;

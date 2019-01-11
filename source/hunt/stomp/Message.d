@@ -17,7 +17,7 @@
 module hunt.stomp.Message;
 
 import hunt.stomp.MessageHeaders;
-import hunt.lang.common;
+import hunt.util.Common;
 
 /**
 * See_also:

@@ -20,7 +20,7 @@ import hunt.stomp.support.AbstractMessageChannel;
 import hunt.stomp.Message;
 import hunt.stomp.MessageChannel;
 
-import hunt.container;
+import hunt.collection;
 import hunt.logging;
 import hunt.util.ObjectUtils;
 

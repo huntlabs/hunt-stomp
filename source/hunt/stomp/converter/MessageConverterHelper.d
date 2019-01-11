@@ -3,7 +3,7 @@ module hunt.stomp.converter.MessageConverterHelper;
 import hunt.stomp.Message;
 import hunt.stomp.MessageHeaders;
 import hunt.stomp.support.GenericMessage;
-import hunt.lang.exception;
+import hunt.Exceptions;
 import hunt.logging;
 
 class MessageConverterHelper {

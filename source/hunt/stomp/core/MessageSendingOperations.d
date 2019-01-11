@@ -20,7 +20,7 @@ import hunt.stomp.core.MessagePostProcessor;
 import hunt.stomp.Message;
 import hunt.stomp.MessagingException;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 /**
  * Operations for sending messages to a destination.

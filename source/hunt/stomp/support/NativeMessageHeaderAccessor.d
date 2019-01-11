@@ -19,7 +19,7 @@ module hunt.stomp.support.NativeMessageHeaderAccessor;
 import hunt.stomp.support.MessageHeaderAccessor;
 import hunt.stomp.Message;
 
-import hunt.container;
+import hunt.collection;
 import hunt.util.ObjectUtils;
 
 // 

@@ -16,12 +16,12 @@
 
 module hunt.stomp.support.GenericMessage;
 
-import hunt.container.Map;
-
 import hunt.stomp.Message;
 import hunt.stomp.MessageHeaders;
 
-import hunt.string;
+import hunt.collection.Map;
+import hunt.text.Common;
+import hunt.text.StringBuilder;
 import hunt.util.ObjectUtils;
 
 

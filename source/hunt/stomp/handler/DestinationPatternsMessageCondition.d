@@ -19,9 +19,9 @@ module hunt.stomp.handler.DestinationPatternsMessageCondition;
 import hunt.stomp.handler.AbstractMessageCondition;
 import hunt.stomp.Message;
 
-import hunt.container;
-import hunt.lang.Nullable;
-import hunt.string.PathMatcher;
+import hunt.collection;
+import hunt.Nullable;
+import hunt.text.PathMatcher;
 
 import std.array;
 import std.string;

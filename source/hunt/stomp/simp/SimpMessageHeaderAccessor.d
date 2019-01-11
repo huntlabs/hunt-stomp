@@ -23,12 +23,12 @@ import hunt.stomp.support.IdTimestampMessageHeaderInitializer;
 import hunt.stomp.support.MessageHeaderAccessor;
 import hunt.stomp.support.NativeMessageHeaderAccessor;
 
-
+import hunt.collection.List;
+import hunt.collection.Map;
+import hunt.Nullable;
 import hunt.security.Principal;
-import hunt.container.List;
-import hunt.container.Map;
-import hunt.lang.Nullable;
-import hunt.string;
+import hunt.text.Common;
+import hunt.text.StringBuilder;
 
 import std.conv;
 

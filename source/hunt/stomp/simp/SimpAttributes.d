@@ -20,12 +20,13 @@ import hunt.stomp.simp.SimpMessageHeaderAccessor;
 import hunt.stomp.Message;
 import hunt.stomp.MessageHeaders;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 import hunt.logging;
-import hunt.lang.Boolean;
-import hunt.lang.common;
-import hunt.lang.exception;
-import hunt.string;
+import hunt.Boolean;
+import hunt.util.Common;
+import hunt.Exceptions;
+import hunt.text.Common;
+import hunt.text.StringUtils;
 
 import std.string;
 import std.traits;

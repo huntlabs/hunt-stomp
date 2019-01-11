@@ -16,7 +16,7 @@
 
 module hunt.stomp.simp.SimpMessageSendingOperations;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 import hunt.stomp.MessagingException;
 import hunt.stomp.core.MessagePostProcessor;

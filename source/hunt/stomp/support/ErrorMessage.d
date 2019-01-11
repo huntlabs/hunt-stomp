@@ -21,7 +21,7 @@ import hunt.stomp.support.GenericMessage;
 import hunt.stomp.Message;
 import hunt.stomp.MessageHeaders;
 
-import hunt.container.Map;
+import hunt.collection.Map;
 
 
 /**

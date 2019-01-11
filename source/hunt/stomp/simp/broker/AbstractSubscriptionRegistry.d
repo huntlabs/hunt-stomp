@@ -23,8 +23,8 @@ import hunt.stomp.MessageHeaders;
 import hunt.stomp.simp.SimpMessageHeaderAccessor;
 import hunt.stomp.simp.SimpMessageType;
 
-import hunt.container;
-import hunt.lang.exception;
+import hunt.collection;
+import hunt.Exceptions;
 import hunt.logging;
 
 import std.conv;

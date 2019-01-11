@@ -16,7 +16,7 @@
 
 module hunt.stomp.core.MessageReceivingOperations;
 
-import hunt.lang.Nullable;
+import hunt.Nullable;
 import hunt.stomp.Message;
 import hunt.stomp.MessagingException;
 

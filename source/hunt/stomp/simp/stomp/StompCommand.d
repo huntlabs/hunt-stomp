@@ -17,7 +17,7 @@
 module hunt.stomp.simp.stomp.StompCommand;
 
 import hunt.stomp.simp.SimpMessageType;
-import hunt.util.traits;
+import hunt.util.Traits;
 
 import std.string;
 

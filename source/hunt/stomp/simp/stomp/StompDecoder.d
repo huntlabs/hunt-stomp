@@ -25,13 +25,14 @@ import hunt.stomp.support.MessageHeaderAccessor;
 import hunt.stomp.support.MessageBuilder;
 import hunt.stomp.support.NativeMessageHeaderAccessor;
 
-import hunt.container;
+import hunt.collection;
 import hunt.io.ByteArrayOutputStream;
 import hunt.logging;
-import hunt.lang.exception;
-import hunt.lang.Integer;
-import hunt.lang.Nullable;
-import hunt.string;
+import hunt.Exceptions;
+import hunt.Integer;
+import hunt.Nullable;
+import hunt.text.Common;
+import hunt.text.StringBuilder;
 import hunt.util.TypeUtils;
 
 import std.conv;

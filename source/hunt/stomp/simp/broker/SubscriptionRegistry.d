@@ -17,7 +17,7 @@
 module hunt.stomp.simp.broker.SubscriptionRegistry;
 
 import hunt.stomp.Message;
-import hunt.container.MultiValueMap;
+import hunt.collection.MultiValueMap;
 
 /**
  * A registry of subscription by session that allows looking up subscriptions.

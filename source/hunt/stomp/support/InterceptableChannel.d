@@ -18,7 +18,7 @@ module hunt.stomp.support.InterceptableChannel;
 
 import hunt.stomp.support.ChannelInterceptor;
 
-import hunt.container.List;
+import hunt.collection.List;
 
 /**
  * A {@link hunt.stomp.MessageChannel MessageChannel} that

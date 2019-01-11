@@ -18,8 +18,8 @@ module hunt.stomp.handler.AbstractMessageCondition;
 
 import hunt.stomp.handler.MessageCondition;
 
-import hunt.container;
-import hunt.string.StringBuilder;
+import hunt.collection;
+import hunt.text.StringBuilder;
 
 
 

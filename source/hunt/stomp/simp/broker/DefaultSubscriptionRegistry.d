@@ -19,10 +19,10 @@ module hunt.stomp.simp.broker.DefaultSubscriptionRegistry;
 import hunt.stomp.simp.broker.AbstractSubscriptionRegistry;
 import hunt.stomp.simp.broker.SubscriptionRegistry;
 
-import hunt.container;
-import hunt.lang.exception;
+import hunt.collection;
+import hunt.Exceptions;
 import hunt.logging;
-import hunt.string.PathMatcher;
+import hunt.text.PathMatcher;
 
 import std.array;
 import std.conv;

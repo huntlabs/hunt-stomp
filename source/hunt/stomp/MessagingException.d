@@ -19,7 +19,7 @@ module hunt.stomp.MessagingException;
 import hunt.stomp.exception;
 import hunt.stomp.Message;
 
-import hunt.lang.exception;
+import hunt.Exceptions;
 
 
 /**
