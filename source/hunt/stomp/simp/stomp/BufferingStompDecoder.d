@@ -140,7 +140,7 @@ class BufferingStompDecoder {
 			result = this.chunks.front();
 		}
 		else {
-			result = ByteBuffer.allocate(getBufferSize());
+			result = BufferUtils.allocate(getBufferSize());
 			foreach (ByteBuffer partial ; this.chunks) {
 				result.put(partial);
 			}
