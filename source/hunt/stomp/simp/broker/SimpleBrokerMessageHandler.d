@@ -36,8 +36,13 @@ import hunt.util.DateTime;
 import hunt.util.Common;
 import hunt.Exceptions;
 import hunt.logging;
-import hunt.security.Principal;
 import hunt.text.PathMatcher;
+
+// dfmt off
+version(Have_hunt_security) {
+    import hunt.security.Principal;
+}
+// dfmt on
 
 import std.algorithm;
 import std.conv;
@@ -318,9 +323,18 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 				long[] heartbeatOut = getHeartbeatValue();
 				// TODO: Tasks pending completion -@zxp at 10/31/2018, 4:39:26 PM
 				// 
-				Principal user = null; // SimpMessageHeaderAccessor.getUser(headers);
+				version(Have_hunt_security) {
+					Principal user = null; // SimpMessageHeaderAccessor.getUser(headers);
+				}
+			
 				MessageChannel outChannel = getClientOutboundChannelForSession(sessionId);
-				this.sessions.put(sessionId, new SessionInfo(sessionId, user, outChannel, heartbeatIn, heartbeatOut));
+
+				version(Have_hunt_security) {
+					this.sessions.put(sessionId, new SessionInfo(sessionId, user, outChannel, heartbeatIn, heartbeatOut));
+				} else {
+					this.sessions.put(sessionId, new SessionInfo(sessionId, outChannel, heartbeatIn, heartbeatOut));
+				}
+				
 				SimpMessageHeaderAccessor connectAck = SimpMessageHeaderAccessor.create(SimpMessageType.CONNECT_ACK);
 				initHeaders(connectAck);
 				connectAck.setSessionId(sessionId);
@@ -341,7 +355,12 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 			logMessage(message);
 			if (sessionId !is null) {
 				// Principal user = SimpMessageHeaderAccessor.getUser(headers);
-				handleDisconnect(sessionId, null, message);
+
+				version(Have_hunt_security) {
+					handleDisconnect(sessionId, null, message);
+				} else {
+					handleDisconnect(sessionId, message);
+				}
 			}
 		}
 		else if (SimpMessageType.SUBSCRIBE == messageType) {
@@ -383,7 +402,7 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 		}
 	}
 
-	private void handleDisconnect(string sessionId, Principal user, MessageBase origMessage) {
+	private void handleDisconnect(string sessionId, MessageBase origMessage) {
 		this.sessions.remove(sessionId);
 		this.subscriptionRegistry.unregisterAllSubscriptions(sessionId);
 		SimpMessageHeaderAccessor accessor = SimpMessageHeaderAccessor.create(SimpMessageType.DISCONNECT_ACK);
@@ -459,7 +478,13 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 			long now =DateTimeHelper.currentTimeMillis();
 			foreach (SessionInfo info ; sessions.values()) {
 				if (info.getReadInterval() > 0 && (now - info.getLastReadTime()) > info.getReadInterval()) {
-					handleDisconnect(info.getSessionId(), null, null); // info.getUser()
+
+					version(Have_hunt_security) {
+						handleDisconnect(info.getSessionId(), null, null); // info.getUser()
+					} else {
+						handleDisconnect(info.getSessionId(), null); // info.getUser()
+					}
+
 				}
 				if (info.getWriteInterval() > 0 && (now - info.getLastWriteTime()) > info.getWriteInterval()) {
 					SimpMessageHeaderAccessor accessor = SimpMessageHeaderAccessor.create(SimpMessageType.HEARTBEAT);
@@ -502,8 +527,8 @@ private static class SessionInfo {
 
 	private long lastWriteTime;
 
-	this(string sessionId, Principal user,  MessageChannel outboundChannel,
-			long[] clientHeartbeat, long[] serverHeartbeat) {
+	this(string sessionId, MessageChannel outboundChannel,
+			long[] clientHeartbeat, long[] serverHeartbeat) { // Principal user, 
 
 		this.sessionId = sessionId;
 		// this.user = user;

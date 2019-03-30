@@ -26,9 +26,12 @@ import hunt.stomp.support.NativeMessageHeaderAccessor;
 import hunt.collection.List;
 import hunt.collection.Map;
 import hunt.Nullable;
-import hunt.security.Principal;
 import hunt.text.Common;
 import hunt.text.StringBuilder;
+
+version(Have_hunt_security) {
+    import hunt.security.Principal;
+}
 
 import std.conv;
 
