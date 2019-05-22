@@ -208,7 +208,7 @@ class StompHeaders : MultiValueMap!(string, string) {
 			assert(ver !is null && (ver == ("1.1") || ver == ("1.2")),
 						"Invalid version: " ~ ver);
 		}
-		set(ACCEPT_VERSION, StringUtils.arrayToCommaDelimitedString(acceptVersions.dup));
+		set(ACCEPT_VERSION, StringUtils.toCommaDelimitedString(acceptVersions.dup));
 	}
 
 	/**
