@@ -329,12 +329,14 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 			
 				MessageChannel outChannel = getClientOutboundChannelForSession(sessionId);
 
-				version(Have_hunt_security) {
-					this.sessions.put(sessionId, new SessionInfo(sessionId, user, outChannel, heartbeatIn, heartbeatOut));
-				} else {
+				// version(Have_hunt_security) {
+				// 	this.sessions.put(sessionId, new SessionInfo(sessionId, user, outChannel, heartbeatIn, heartbeatOut));
+				// } else {
+				// 	this.sessions.put(sessionId, new SessionInfo(sessionId, outChannel, heartbeatIn, heartbeatOut));
+				// }
+
 					this.sessions.put(sessionId, new SessionInfo(sessionId, outChannel, heartbeatIn, heartbeatOut));
-				}
-				
+
 				SimpMessageHeaderAccessor connectAck = SimpMessageHeaderAccessor.create(SimpMessageType.CONNECT_ACK);
 				initHeaders(connectAck);
 				connectAck.setSessionId(sessionId);
@@ -356,11 +358,13 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 			if (sessionId !is null) {
 				// Principal user = SimpMessageHeaderAccessor.getUser(headers);
 
-				version(Have_hunt_security) {
-					handleDisconnect(sessionId, null, message);
-				} else {
-					handleDisconnect(sessionId, message);
-				}
+				// version(Have_hunt_security) {
+				// 	handleDisconnect(sessionId, null, message);
+				// } else {
+				// 	handleDisconnect(sessionId, message);
+				// }
+
+					handleDisconnect(sessionId, message);				
 			}
 		}
 		else if (SimpMessageType.SUBSCRIBE == messageType) {
@@ -479,11 +483,12 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 			foreach (SessionInfo info ; sessions.values()) {
 				if (info.getReadInterval() > 0 && (now - info.getLastReadTime()) > info.getReadInterval()) {
 
-					version(Have_hunt_security) {
-						handleDisconnect(info.getSessionId(), null, null); // info.getUser()
-					} else {
-						handleDisconnect(info.getSessionId(), null); // info.getUser()
-					}
+					// version(Have_hunt_security) {
+					// 	handleDisconnect(info.getSessionId(), null, null); // info.getUser()
+					// } else {
+					// 	handleDisconnect(info.getSessionId(), null); // info.getUser()
+					// }
+					handleDisconnect(info.getSessionId(), null);
 
 				}
 				if (info.getWriteInterval() > 0 && (now - info.getLastWriteTime()) > info.getWriteInterval()) {
@@ -508,7 +513,7 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 
 
 
-private static class SessionInfo {
+private class SessionInfo {
 
 	/* STOMP spec: receiver SHOULD take into account an error margin */
 	private enum long HEARTBEAT_MULTIPLIER = 3;
