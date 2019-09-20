@@ -25,7 +25,7 @@ import hunt.text.StringUtils;
 import hunt.util.AcceptMimeType;
 import hunt.util.MimeType;
 import hunt.util.MimeTypeUtils;
-// import hunt.util.ObjectUtils;
+import hunt.util.ObjectUtils;
 
 import std.conv;
 import std.range;
@@ -642,5 +642,7 @@ class StompHeaders : MultiValueMap!(string, string) {
 	static StompHeaders readOnlyStompHeaders(MultiStringsMap headers) {
 		return new StompHeaders((headers !is null ? headers : Collections.emptyMap!(string, List!(string))()), true);
 	}
+
+    mixin CloneMemberTemplate!(typeof(this));	
 
 }
