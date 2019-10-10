@@ -728,7 +728,7 @@ class MessageHeaderAccessor {
 
 			if (getTimestamp() is null) {
 				if (this.outer.enableTimestamp) {
-					Long timestamp = new Long(DateTimeHelper.currentTimeMillis());
+					Long timestamp = new Long(DateTime.currentTimeMillis());
 					getRawHeaders().put(TIMESTAMP, timestamp);
 				}
 			}

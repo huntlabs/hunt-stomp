@@ -68,8 +68,6 @@ abstract class AbstractSubscribableChannel : AbstractMessageChannel, Subscribabl
 
 	override
 	bool unsubscribe(MessageHandler handler) {
-
-		trace("xxxxxxxxxxxxxx");
 		bool result = this.handlers.remove(handler);
 		version(HUNT_DEBUG) {
 			if (result)

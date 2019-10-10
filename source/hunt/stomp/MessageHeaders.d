@@ -164,7 +164,7 @@ class MessageHeaders : AbstractMap!(string, Object) {
 		}
 
 		if (timestamp is null) {
-			timestamp = new Long(DateTimeHelper.currentTimeMillis());
+			timestamp = new Long(DateTime.currentTimeMillis());
 			this.headers.put(TIMESTAMP, timestamp);
 		}
 		else if (timestamp < 0) {

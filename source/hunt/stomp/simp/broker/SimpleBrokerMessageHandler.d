@@ -381,7 +381,7 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 		if (sessionId !is null) {
 			SessionInfo info = this.sessions.get(sessionId);
 			if (info !is null) {
-				info.setLastReadTime(DateTimeHelper.currentTimeMillis);
+				info.setLastReadTime(DateTime.currentTimeMillis);
 			}
 		}
 	}
@@ -429,7 +429,7 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 				trace("Broadcasting to " ~ subscriptions.size().to!string() ~ " sessions.");
 			}
 		}
-		long now = DateTimeHelper.currentTimeMillis();
+		long now = DateTime.currentTimeMillis();
 		foreach(string sessionId, List!string subscriptionIds; subscriptions) {
 			foreach (string subscriptionId ; subscriptionIds) {
 				SimpMessageHeaderAccessor headerAccessor = SimpMessageHeaderAccessor.create(SimpMessageType.MESSAGE);
@@ -479,7 +479,7 @@ class SimpleBrokerMessageHandler : AbstractBrokerMessageHandler {
 
 		override
 		void run() {
-			long now =DateTimeHelper.currentTimeMillis();
+			long now =DateTime.currentTimeMillis();
 			foreach (SessionInfo info ; sessions.values()) {
 				if (info.getReadInterval() > 0 && (now - info.getLastReadTime()) > info.getReadInterval()) {
 
@@ -548,7 +548,7 @@ private class SessionInfo {
 			this.readInterval = 0;
 			this.writeInterval = 0;
 		}
-		this.lastReadTime = this.lastWriteTime =DateTimeHelper.currentTimeMillis();
+		this.lastReadTime = this.lastWriteTime =DateTime.currentTimeMillis();
 	}
 
 	string getSessionId() {
